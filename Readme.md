@@ -30,15 +30,18 @@ BASHEER AHMED
 HYDER ALI
 
 ### Checklist:
+
 - [ ] Ideation Phase
   - [x] Literature Survey 
   - [x] Empathy Map 
-  - [ ] Problem Statement
-  - [ ] Ideation
+  - [x] Problem Statement
+  - [ ] Brainstorm & Ideation
+  
 - [ ] Project Design Phase -I
   - [ ] Proposed Solution 
   - [ ] Problem Solution Fit
   - [ ] Solution Architecture
+  
 - [ ] Project Design Phase -II
   - [ ] Customer Journey
   - [ ] Functional Requirement Document
