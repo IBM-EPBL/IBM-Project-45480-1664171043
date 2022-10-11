@@ -31,8 +31,8 @@ HYDER ALI
 
 ### Checklist:
 - [ ] Ideation Phase
-  - [ ] Literature Survey : 29 Aug - 3rd Sept 2022
-  - [ ] Empathy Map : 5 - 10th Sept 2022
+  - [x] Literature Survey : 29 Aug - 3rd Sept 2022
+  - [x] Empathy Map : 5 - 10th Sept 2022
   - [ ] Problem Statement : 5 - 10th Sept 2022
   - [ ] Ideation : 12 - 17 Sept 2022
 - [ ] Project Design Phase -I
