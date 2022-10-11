@@ -31,28 +31,28 @@ HYDER ALI
 
 ### Checklist:
 - [ ] Ideation Phase
-  - [x] Literature Survey : 29 Aug - 3rd Sept 2022
-  - [x] Empathy Map : 5 - 10th Sept 2022
-  - [ ] Problem Statement : 5 - 10th Sept 2022
-  - [ ] Ideation : 12 - 17 Sept 2022
+  - [x] Literature Survey 
+  - [x] Empathy Map 
+  - [ ] Problem Statement
+  - [ ] Ideation
 - [ ] Project Design Phase -I
-  - [ ] Proposed Solution : 19 - 24 Sept 2022 
-  - [ ] Problem Solution Fit : 26 Sept - 01 Oct 2022
-  - [ ] Solution Architecture : 26 Sept - 01 Oct 2022
+  - [ ] Proposed Solution 
+  - [ ] Problem Solution Fit
+  - [ ] Solution Architecture
 - [ ] Project Design Phase -II
-  - [ ] Customer Journey : 3 - 8 Oct 2022
-  - [ ] Functional Requirement Document : 10 - 15 Oct 2022
-  - [ ] Data Flow Daigrams :  10 - 15 Oct 2022
-  - [ ] Technology Architecture :  10 - 15 Oct 2022
+  - [ ] Customer Journey
+  - [ ] Functional Requirement Document
+  - [ ] Data Flow Daigrams
+  - [ ] Technology Architecture
 
 - [ ] Project Planning Phase
-  - [ ] Milestone : 17 - 22 Oct 2022 
-  - [ ] Activity List : 17 - 22 Oct 2022 
-  - [ ] Sprint Delivery Plan : 17 - 22 Oct 2022 
+  - [ ] Milestone 
+  - [ ] Activity List 
+  - [ ] Sprint Delivery Plan 
 
 - [ ] Project Development Phase
-  - [ ] Sprint 1 : 24 - 29 Oct 2022
-  - [ ] Sprint 2 : 31 Oct - 5 Nov 2022
-  - [ ] Sprint 3 : 7 - 12 Nov 2022
-  - [ ] Sprint 4 : 14 - 19 Nov 2022
+  - [ ] Sprint 1
+  - [ ] Sprint 2
+  - [ ] Sprint 3
+  - [ ] Sprint 4
 
