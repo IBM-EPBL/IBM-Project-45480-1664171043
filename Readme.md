@@ -31,20 +31,20 @@ HYDER ALI
 
 ### Checklist:
 
-- [ ] Ideation Phase
+- [x] Ideation Phase
   - [x] Literature Survey 
   - [x] Empathy Map 
-  - [ ] Problem Statement
+  - [x] Problem Statement
   - [x] Brainstorm & Ideation
   
 - [ ] Project Design Phase -I
   - [ ] Proposed Solution 
-  - [ ] Problem Solution Fit
+  - [x] Problem Solution Fit
   - [ ] Solution Architecture
   
 - [ ] Project Design Phase -II
   - [ ] Customer Journey
-  - [ ] Functional Requirement Document
+  - [ ] Solution Requirements
   - [ ] Data Flow Daigrams
   - [ ] Technology Architecture
 
