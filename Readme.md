@@ -34,8 +34,8 @@ HYDER ALI
 - [ ] Ideation Phase
   - [x] Literature Survey 
   - [x] Empathy Map 
-  - [x] Problem Statement
-  - [ ] Brainstorm & Ideation
+  - [ ] Problem Statement
+  - [x] Brainstorm & Ideation
   
 - [ ] Project Design Phase -I
   - [ ] Proposed Solution 
