@@ -34,19 +34,19 @@ HYDER ALI
 - [x] Ideation Phase
   - [x] Literature Survey 
   - [x] Empathy Map 
-  - [ ] Problem Statement
+  - [x] Problem Statement
   - [x] Brainstorm & Ideation
   
-- [ ] Project Design Phase -I
-  - [ ] Proposed Solution 
+- [x] Project Design Phase -I
+  - [x] Proposed Solution 
   - [x] Problem Solution Fit
-  - [ ] Solution Architecture
+  - [x] Solution Architecture
   
 - [ ] Project Design Phase -II
-  - [ ] Customer Journey
+  - [x] Customer Journey
   - [ ] Solution Requirements
   - [ ] Data Flow Daigrams
-  - [ ] Technology Architecture
+  - [x] Technology Architecture
 
 - [ ] Project Planning Phase
   - [ ] Milestone 
