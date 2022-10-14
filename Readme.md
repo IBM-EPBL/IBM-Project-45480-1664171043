@@ -45,7 +45,7 @@ HYDER ALI
 - [ ] Project Design Phase -II
   - [x] Customer Journey
   - [ ] Solution Requirements
-  - [ ] Data Flow Daigrams
+  - [x] Data Flow Daigrams
   - [x] Technology Architecture
 
 - [ ] Project Planning Phase
