@@ -51,7 +51,7 @@ HYDER ALI
 - [ ] Project Planning Phase
   - [ ] Milestone 
   - [ ] Activity List 
-  - [ ] Sprint Delivery Plan 
+  - [x] Sprint Delivery Plan 
 
 - [ ] Project Development Phase
   - [ ] Sprint 1
