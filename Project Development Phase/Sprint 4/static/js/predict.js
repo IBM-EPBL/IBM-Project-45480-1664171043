@@ -1,82 +1,47 @@
-from flask import Flask,request, render_template, redirect, Response
-from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
-from werkzeug.utils import secure_filename
-import os
+var myClarifaiApiKey = '42cd5870c6934eed8774e71f597e58af';
+var myWolframAppId = '7KH5V5-TPREJGGWJ8';
 
-import ibm_db
+var app = new Clarifai.App({apiKey: myClarifaiApiKey});
 
-app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" +os.path.join(basedir,'nutrition.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+/*
+  Purpose: Pass information to other helper functions after a user clicks 'Predict'
+  Args:
+    value - Actual filename or URL
+    source - 'url' or 'file'
+    */
+function predict_click(value, source) {
+  var preview = $(".food-photo");
+  var file    = document.querySelector("input[type=file]").files[0];
+  var loader  = "https://s3.amazonaws.com/static.mlh.io/icons/loading.svg";
+  var reader  = new FileReader();
 
-db = SQLAlchemy(app)
+  // load local file picture
+  reader.addEventListener("load", function () {
+    preview.attr('style', 'background-image: url("' + reader.result + '");');
+    doPredict({ base64: reader.result.split("base64,")[1] });
+  }, false);
 
-class Register(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(50), nullable = False)
-    dob =db.Column(db.Integer,nullable = False)
-    phone = db.Column(db.Integer, nullable = False)
-    email =db.Column(db.String(50), nullable = False, unique = True)
-    password = db.Column(db.Integer, nullable = False, unique = True)
-    date_joined = db.Column(db.Date,default = datetime.utcnow)
-    def __repr__(self):
-        return f"<User : {self.email}>"
-@app.route("/")
-@app.route("/sign_in.html")
-def index():
-    return render_template("sign_in.html")
-@app.route('/home.html')
-def home():
-    return render_template("home.html")
-@app.route('/reg_page.html')
-def reg_page():
-    return render_template("reg_page.html")
-@app.route('/index.html')
-def predict():
-    return render_template("index.html")
-@app.route('/bmicalc.html')
-def bmicalc():
-    return render_template("bmicalc.html")
+  if (file) {
+    reader.readAsDataURL(file);
+    $('#concepts').html('<img src="' + loader + '" class="loading" />');
+  } else { alert("No file selcted!"); }
+}
 
+/*
+  Purpose: Does a v2 prediction based on user input
+  Args:
+    value - Either {url : urlValue} or { base64 : base64Value }
+*/
+function doPredict(value) {
+  app.models.predict(Clarifai.FOOD_MODEL, value).then(function(response) {
+      if(response.rawData.outputs[0].data.hasOwnProperty("concepts")) {
+        var tag = response.rawData.outputs[0].data.concepts[0].name;
+        var url = 'http://api.wolframalpha.com/v2/query?input='+tag+'%20nutrition%20facts&appid='+myWolframAppId;
 
-@app.route('/register',methods=['GET','POST'])
-def register():
-    if request.method == 'POST':
-        name = request.form.get('name')
-        dob = request.form.get('date')
-        phone = request.form.get('phone')
-        email = request.form.get('email')
-        password = request.form.get('password')
-
-        avail = bool(Register.query.filter_by(email = email).first())
-        avail1 = bool(Register.query.filter_by(password=password).first())
-        if avail:
-            return render_template('reg_page.html', result = "email already exist")
-        elif avail1:
-            return render_template('reg_page.html', result = "password already exist")
-        else:
-
-            query = Register(name = name, dob = dob, phone = phone, email = email, password = password)
-            db.session.add(query)
-            db.session.commit()
-            return redirect("/sign_in.html")
-    else:
-        return redirect("/")
-@app.route('/signin',methods=['GET','POST'])
-def signin():
-    if request.method == 'POST':
-        name_v = request.form.get('name')
-        password_v = request.form.get('password')
-        login = Register.query.filter_by(name = name_v, password = password_v).first()
-        # query = Admin(name='ESHWIN',password= "Jeffick")
-        # db.session.add(query)
-        # db.session.commit()
-       
-        if login is not None:
-            return render_template('home.html', login_data= name_v)
-        else:
-            return render_template('sign_in.html', login_data="make sure  entered the correct password")
-if __name__ == '__main__':
-    app.run(debug = True)
+        getNutritionalInfo(url, function (result) {
+          $('#concepts').html('<h3>'+ tag + '</h3>' + "<img src='"+result+"'>");
+        });
+      }
+    }, function(err) { console.log(err); }
+  );
+}
