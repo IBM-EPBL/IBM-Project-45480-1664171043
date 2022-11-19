@@ -58,11 +58,23 @@ HYDER ALI
   - [x] Install IBM Cloud CLI 
   - [x] Docker CLI Installation
   - [x] Create an Account in SendGrid 
-  - [ ] Create an Account in Nutrition API
+  - [x] Create an Account in Nutrition API
 
-- [ ] Project Development Phase
-  - [ ] Sprint 1
-  - [ ] Sprint 2
-  - [ ] Sprint 3
-  - [ ] Sprint 4
+- [x] Project Development Phase
+  - [x] Sprint 1
+  - [x] Sprint 2
+  - [x] Sprint 3
+  - [x] Sprint 4
+  
+- [x] Implementing Web Application
+  - [x] Create IBM DB2 and Connect with Python
+  - [x] Create UI To Interact With Web Application
+  - [x] Integrate Nutrition API 
+
+- [x] Integrating SendGrid with Python
+
+- [x] Deployment of App in IBM Cloud
+  - [x] Containerize the App
+  - [x] Deploy in Kubernetes Cluster
+  - [x] Upload the Image to the IBM Cloud Registry
 
